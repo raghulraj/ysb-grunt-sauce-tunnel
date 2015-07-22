@@ -3,10 +3,7 @@
   "description": "Runs the saucelabs tunnel",
   "version": "0.0.1",
   "homepage": "https://github.com/raghulraj/ysb-grunt-sauce-tunnel",
-  "author": {
-    "name": "Raghul Raj V",
-    "email": "raghulraj@gmail.com"
-  },
+  "author": "Raghul Raj V <raghulraj@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/raghulraj/ysb-grunt-sauce-tunnel.git"
@@ -48,5 +45,6 @@
     "sauce connect",
     "testing",
     "local tunnel"
-  ]
+  ],
+  "license": "ISC"
 }

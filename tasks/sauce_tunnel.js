@@ -1,8 +1,7 @@
 /*
- * grunt-sauce-tunnel
- * https://github.com/civitaslearning/grunt-sauce-tunnel
+ * ysb-grunt-sauce-tunnel
+ * https://github.com/raghulraj/ysb-grunt-sauce-tunnel
  *
- * Copyright (c) 2013 Dan Harbin
  * Licensed under the MIT license.
  */
 
@@ -25,7 +24,7 @@
 			});
 		}
 
-		grunt.registerMultiTask('sauce_tunnel_stop', 'Stop the Sauce Labs tunnel', function () {
+		grunt.registerMultiTask('ysb_sauce_tunnel_stop', 'Stop the Sauce Labs tunnel', function () {
 			// Merge task-specific and/or target-specific options with these defaults.
 			var options = this.options({
 				username: process.env.SAUCE_USERNAME,
@@ -71,7 +70,7 @@
 
 		});
 
-		grunt.registerMultiTask('sauce_tunnel', 'Runs the Sauce Labs tunnel', function () {
+		grunt.registerMultiTask('ysb_sauce_tunnel', 'Runs the Sauce Labs tunnel', function () {
 			// Merge task-specific and/or target-specific options with these defaults.
 			var options = this.options({
 				username: process.env.SAUCE_USERNAME,
