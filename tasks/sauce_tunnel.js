@@ -89,9 +89,6 @@
 			};
 
 			function start(options) {
-
-				console.log("________________________ddd");
-				console.log(options.pac);;
 				if (tunnel) {
 					stop();
 
