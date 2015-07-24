@@ -98,7 +98,7 @@
 				}
 
 				done = grunt.task.current.async();
-				if( options.hasOwnProperty('pac')){
+				if( options.pac != "" ){
 				tunnel = new SauceTunnel(
 					options.username,
 					options.key,

@@ -17,9 +17,9 @@ module.exports = function(grunt) {
       custom_options: {
 	options: {
 	 username: 'your sauce username',
-	 key: 'your sauce key',
+	 key: 'your sauce key'
 	 tunnelTimeout: 120,
-	pac: 'your_pac_url'
+	 pac: 'pac_url.pac'
   	},server: {}
 	}
     },
