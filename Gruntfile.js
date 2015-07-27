@@ -1,5 +1,5 @@
 /*
- * grunt-sauce-tunnel
+ * ysb-grunt-sauce-tunnel
  * https://github.com/civitaslearning/grunt-sauce-tunnel
  *
  * Copyright (c) 2013 Dan Harbin
