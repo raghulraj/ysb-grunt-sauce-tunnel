@@ -104,8 +104,7 @@
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['--pac',options.pac],
-					['-B', 'all']
+					['--pac',options.pac,'-B', 'all']
 					);
 				}
 				else
