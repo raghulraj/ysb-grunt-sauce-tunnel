@@ -32,6 +32,8 @@ grunt.initConfig({
     	key: 'your sauce key',
     	identifier: 'tunnel identifier',
     	tunnelTimeout: 120, // whatever timeout you want to use
+	scproxy: <port number> // Port to use for the built-in HTTP proxy
+	seport: <port number> // Port on which Sauce Connect's Selenium relay will listen for requests
 	pac: 'pac_url.pac'
     },
     server: {}
@@ -60,6 +62,14 @@ Default value: `workaround`
 #### options.pac
 Type: `String`
 Default value: `Proxy_PAC_Url`
+
+#### options.scproxy
+Type: `Integer`
+Default value: `29999`
+
+#### options.seport
+Type: `Integer`
+Default value: `4446`
 
 See [the FAQ](https://saucelabs.com/docs/connect#tunnel-identifier) for a better explanation. If you use this option, you also have to add the `tunnel-identifier` to your desired capabilities so that Sauce can associate your tests with the tunnel.  Right now it's required by [sauce-tunnel](https://github.com/jmreidy/sauce-tunnel), so it'll default to 'workaround' until `sauce-tunnel` doesn't require it either.
 
