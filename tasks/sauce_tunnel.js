@@ -104,7 +104,7 @@
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com']
+					['-X', options.scproxy, '-P', options.seport,'--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com']
 					);
 				}
 				else
@@ -113,7 +113,8 @@
                                         options.username,
                                         options.key,
                                         options.identifier,
-                                        true // tunneled = true
+                                        true, // tunneled = true
+					['-X', options.scproxy, '-P', options.seport]
                                         );
 				}
 				// keep actives tunnel in memory for stop task
