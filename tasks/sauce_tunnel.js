@@ -8,7 +8,7 @@
 'use strict';
 
 (function () {
-	var SauceTunnel = require('sauce-tunnel'),
+	var SauceTunnel = require('ysb-sauce-tunnel'),
 	tunnels =  {};
 
 	module.exports = function (grunt) {
