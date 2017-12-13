@@ -104,7 +104,7 @@
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['-v','--doctor','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com','-X', options.scproxy, '-P', options.seport]
+					['-v','--doctor','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com']
 					);
 				}
 				else
@@ -114,7 +114,7 @@
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-					['-v','--doctor','-X', options.scproxy, '-P', options.seport]
+					['-v','--doctor']
                                         );
 				}
 				// keep actives tunnel in memory for stop task
