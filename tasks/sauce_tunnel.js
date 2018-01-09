@@ -104,17 +104,19 @@
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['-v','--doctor','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com']
+					['-v','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com', '-X', options.scproxy, '-P', options.seport]
 					);
 				}
 				else
 				{
+					var defaultpid = 29999;
+					var defaultsid = 4446;
 					tunnel = new SauceTunnel(
                                         options.username,
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-					['-v','--doctor']
+					['-v','-X', defaultpid, '-P', defaultsid]
                                         );
 				}
 				// keep actives tunnel in memory for stop task
