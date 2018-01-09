@@ -98,25 +98,26 @@
 				}
 
 				done = grunt.task.current.async();
+				var pidport,sidport;
+                                options.scproxy == "" ? pidport = 29999 : pidport = options.scproxy;
+                                options.seport == "" ? sidport = 4666 : sidport = options.seport;
 				if( options.pac != "" ){
 				tunnel = new SauceTunnel(
 					options.username,
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['-v','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com', '-X', options.scproxy, '-P', options.seport]
+					['-v','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com', '-X', pidport, '-P', sidport]
 					);
 				}
 				else
 				{
-					var defaultpid = 29999;
-					var defaultsid = 4446;
 					tunnel = new SauceTunnel(
                                         options.username,
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-					['-v','-X', defaultpid, '-P', defaultsid]
+					['-v','-X', pidport, '-P', sidport]
                                         );
 				}
 				// keep actives tunnel in memory for stop task
