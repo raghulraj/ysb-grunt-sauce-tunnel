@@ -107,7 +107,7 @@
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['-v','--pac',options.pac,'-B', 'mint.qa.cart-secure.com,mint.stage.cart-secure.com', '-X', pidport, '-P', sidport]
+					['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport]
 					);
 				}
 				else
