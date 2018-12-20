@@ -101,13 +101,14 @@
 				var pidport,sidport;
                                 options.scproxy == "" ? pidport = 29999 : pidport = options.scproxy;
                                 options.seport == "" ? sidport = 4666 : sidport = options.seport;
+				options.
 				if( options.pac != "" ){
 				tunnel = new SauceTunnel(
 					options.username,
 					options.key,
 					options.identifier,
 					true, // tunneled = true
-					['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport]
+					['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', options.tunneldomains, '-D', options.directdomains]
 					);
 				}
 				else
