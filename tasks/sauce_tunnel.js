@@ -101,8 +101,17 @@
 				var pidport,sidport,tunneldomains,directdomains;
                                 options.scproxy == "" ? pidport = 29999 : pidport = options.scproxy;
                                 options.seport == "" ? sidport = 4666 : sidport = options.seport;
-				options.tunneldomains == ""? tunneldomains = null : tunneldomains = options.tunneldomains;
-				options.directdomains == ""? directdomains = null : directdomains = options.directdomains;
+                                typeof(options.tunneldomains) == "undefined" ? tunneldomains = "" : tunneldomains = options.tunneldomains;
+                                typeof(options.directdomains) == "undefined" ? directdomains = "" : directdomains = options.directdomains;
+                                if( options.pac != "" ){
+                                tunnel = new SauceTunnel(
+                                        options.username,
+                                        options.key,
+                                        options.identifier,
+                                        true, // tunneled = true
+                                        ['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains]
+                                        );
+                                }
 				if( options.pac != "" ){
 				tunnel = new SauceTunnel(
 					options.username,
