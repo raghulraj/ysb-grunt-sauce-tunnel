@@ -112,15 +112,6 @@
                                         ['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains]
                                         );
                                 }
-				if( options.pac != "" ){
-				tunnel = new SauceTunnel(
-					options.username,
-					options.key,
-					options.identifier,
-					true, // tunneled = true
-					['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains]
-					);
-				}
 				else
 				{
 					tunnel = new SauceTunnel(
