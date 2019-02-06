@@ -101,8 +101,8 @@
 				var pidport,sidport,tunneldomains,directdomains;
                                 options.scproxy == "" ? pidport = 29999 : pidport = options.scproxy;
                                 options.seport == "" ? sidport = 4666 : sidport = options.seport;
-				options.tunneldomains == ""? tunneldomains = "": tunneldomains = options.tunneldomains;
-				options.directdomains == ""? directdomains = "": directdomains = options.directdomains;
+				options.tunneldomains == ""? tunneldomains = null : tunneldomains = options.tunneldomains;
+				options.directdomains == ""? directdomains = null : directdomains = options.directdomains;
 				if( options.pac != "" ){
 				tunnel = new SauceTunnel(
 					options.username,
