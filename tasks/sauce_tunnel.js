@@ -98,30 +98,32 @@
 				}
 
 				done = grunt.task.current.async();
-				var pidport,sidport,tunneldomains,directdomains;
+				var pidport,sidport,tunneldomains,directdomains,logfile,verbose;
                                 options.scproxy == "" ? pidport = 29999 : pidport = options.scproxy;
                                 options.seport == "" ? sidport = 4666 : sidport = options.seport;
                                 typeof(options.tunneldomains) == "undefined" ? tunneldomains = "" : tunneldomains = options.tunneldomains;
                                 typeof(options.directdomains) == "undefined" ? directdomains = "" : directdomains = options.directdomains;
+                                typeof(options.logfile) == "undefined" ? logfile = "sauce.log" : logfile = options.logfile;
+                                typeof(options.verbose) == "undefined" ? verbose = "" : verbose = "-vv";
                                 if( options.pac != "" ){
                                 tunnel = new SauceTunnel(
                                         options.username,
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-                                        ['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains]
+                                        ['-v','--pac',options.pac,'-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains, '-l', logfile, verbose]
                                         );
                                 }
-				else
-				{
-					tunnel = new SauceTunnel(
+                                else
+                                {
+                                        tunnel = new SauceTunnel(
                                         options.username,
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-					['-v','-B', 'ALL', '-X', pidport, '-P', sidport, '-t', tunneldomains, '-D', directdomains]
+                                        ['-v','-X', pidport, '-P', sidport, '-l', logfile, verbose]
                                         );
-				}
+                                }
 				// keep actives tunnel in memory for stop task
 				tunnels[tunnel.identifier] = tunnel;
 

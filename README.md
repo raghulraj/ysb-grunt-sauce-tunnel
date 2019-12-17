@@ -36,6 +36,8 @@ grunt.initConfig({
 	seport: <port number>, // Port on which Sauce Connect's Selenium relay will listen for requests
 	tunneldomains: <comma separated list of domains>,
 	directdomains: <comma separated list of domains>,
+	logfile: <logfile path>,
+	verbose: true,
 	pac: 'pac_url.pac'
     },
     server: {}
