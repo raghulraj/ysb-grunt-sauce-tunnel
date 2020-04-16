@@ -121,7 +121,7 @@
                                         options.key,
                                         options.identifier,
                                         true, // tunneled = true
-                                        ['-v','-X', pidport, '-P', sidport, '-l', logfile, verbose]
+                                        ['-v','-X', pidport, '-P', sidport, '-D', directdomains, '-l', logfile, verbose]
                                         );
                                 }
 				// keep actives tunnel in memory for stop task
