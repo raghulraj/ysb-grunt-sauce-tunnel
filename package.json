@@ -1,7 +1,7 @@
 {
   "name": "ysb-grunt-sauce-tunnel",
   "description": "Runs the saucelabs tunnel with proxy pac options",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "homepage": "https://github.com/raghulraj/ysb-grunt-sauce-tunnel",
   "author": "Raghul Raj V <raghulraj@gmail.com>",
   "repository": {
@@ -25,7 +25,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "ysb-sauce-tunnel": "1.0.7"
+    "ysb-sauce-tunnel": "1.0.8"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.9.2",
